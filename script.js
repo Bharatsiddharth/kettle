@@ -64,10 +64,16 @@ gsap.to(".content-page1 h1",{
     duration:1,
     repeat: -1,
     yoyo: true,
-    opactiy:0,
+    opactiy:1,
     color:"white",
     // delay:2
 })
+
+// gsap.to(".content-page1 ,.content-page1>h1",{
+//     delay:3,
+//     opacity:0
+// })
+
 
 
 
@@ -151,6 +157,32 @@ tl3.from(".page3 h1",{
 
 
 }
+
+
+
+let rightelem = document.querySelectorAll(".page3,.page4,.page5,.page7");
+
+rightelem.forEach(function(elem){
+    elem.addEventListener("mouseenter", function(){
+        console.log(elem.childNodes);
+        elem.childNodes[1].style.opacity = 1;
+        // elem.childNodes[1].style.scale = 1;
+    })
+
+    elem.addEventListener("mouseleave", function(){
+        console.log("why hello");
+        elem.childNodes[1].style.opacity = 0;
+    })
+
+    elem.addEventListener("mousemove", function(dets){
+       gsap.to(elem.childNodes[1],{
+        x:dets.x - elem.getBoundingClientRect().x-50,
+        y:dets.y - elem.getBoundingClientRect().y-20
+       })
+    })
+})
+
+
 
 page3();
 
@@ -324,7 +356,7 @@ var swiper = new Swiper(".mySwiper", {
 
 
 
-
+// var vedio = {"kettle"}
 
 
 

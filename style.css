@@ -17,7 +17,7 @@ html,body{
 .cursur{
     height: 20px;
     width: 20px;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
     border-radius: 50%;
     position: fixed;
     z-index: 999;
@@ -30,10 +30,24 @@ html,body{
     position: relative;
 }
 
+.vid{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* background-color: #ff5a3d; */
+}
+
+.vid video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
 .navbar{
+    z-index: 999;
     height: 20vh;
     width: 100%;
-    background-color: burlywood;
+    /* background-color: burlywood; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -48,11 +62,24 @@ html,body{
 }
 
 .page1 .content-page1{
+    background-color: black;
+    height: 100%;
+    width: 100%;
     position: absolute;
     display: flex;
-    left: 50%;
-    top: 45%;
-    transform: translate(-50%,-50%);
+    /* left: 50%; */
+    /* top: 45%; */
+    /* transform: translate(-50%,-50%); */
+    opacity: 1;
+}
+
+.content-page1 h1{
+    margin-top: 15vw;
+    /* display: flex; */
+    align-items: center;
+}
+.content-page1 .k{
+    margin-left: 35%;
 }
 
 .content-page1 img{
@@ -451,6 +478,25 @@ html,body{
     color: whitesmoke;
 }
 
+.circle-cursur{
+    height: 10vw;
+    width: 10vw;
+    background-color: #ffffffa5;
+    color: black;
+    opacity: 0;
+    flex-direction: column;
+    /* transform: scale(); */
+    position: absolute;
+    z-index: 10;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    
+    /* border: 1px solid black; */
+}
+
 .left-page3{
     height: 100%;
     width: 45%;
@@ -465,6 +511,7 @@ html,body{
     height: 90%;
     width: 80%;
     object-fit: contain;
+    /* background-color: #4A03B7; */
     
 }
 
